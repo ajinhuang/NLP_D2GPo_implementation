@@ -12,7 +12,7 @@ The majority of code was created by
 ```
 The generation of D2Gpo:
 
-1, Have the fasttext download
+1, Have the fasttext download, and then do the skipgram by script.
 
   ```
   
