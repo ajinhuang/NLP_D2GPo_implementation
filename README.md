@@ -70,6 +70,14 @@ fairseq-train \
     --criterion d2gpo_label_smoothed_cross_entropy --label-smoothing 0.1 --d2gpo-alpha 0.1 --d2gpo-temperature 2 --d2gpo-weight-path ./data-bin/wmt14ende/d2gpo.en-de.gaussian_1_0_0.h5 --d2gpo-vocab-path ./data-bin/wmt14ende/d2gpo.en-de.vocab
 ```
 
+4, Evaluate the model:
+
+```
+fairseq-generate data-bin/wmt17_en_de \
+    --path checkpoints/fconv_wmt_en_de/checkpoint_best.pt \
+    --beam 5 --remove-bpe
+```
+
 
 
 
