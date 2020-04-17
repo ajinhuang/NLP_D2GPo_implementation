@@ -10,7 +10,13 @@ The majority of code was created by
   year = {2019},
 }
 ```
-The generation of D2Gpo:
+
+We can generate the D2GPo using a large dataset while training on a small one. 
+
+We provide the evaluation on two kinds of datasets: the larger one(WMT 14 de-en from 
+http://statmt.org/wmt14/translation-task.htmlDownload), and the smaller one(torchnlp.datasets.iwslt)
+
+The generation of D2GPo:
 
 1, Have the fasttext download, and then do the skipgram by the script.
 
