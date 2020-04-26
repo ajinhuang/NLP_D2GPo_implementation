@@ -6,7 +6,7 @@ This is a course project.
 
     fixed a mistake when super the class of LegacyCriterion.
 
-    changed some fairseq modules.
+    changed fairseq module of criterion, make it recognize the new criterion.
 
     added notebooks which generated graphs.
 
