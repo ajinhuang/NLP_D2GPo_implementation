@@ -21,4 +21,5 @@ build_criterion, register_criterion, CRITERION_REGISTRY = registry.setup_registr
 for file in os.listdir(os.path.dirname(__file__)):
     if file.endswith('.py') and not file.startswith('_'):
         module = file[:file.find('.py')]
+        print("available_modules:", module)
         importlib.import_module('fairseq.criterions.' + module)
