@@ -6,13 +6,23 @@ from sklearn.utils.extmath import softmax
 import h5py
 
 mode = sys.argv[1]
-assert mode in ['gaussian', 'linear', 'cosine']
+assert mode in ["rectengular", 'gaussian', 'linear', 'cosine']
 
 def scatter(a, dim, index, b): # a inplace
     expanded_index = tuple([index if dim==i else np.arange(a.shape[i]).reshape([-1 if i==j else 1 for j in range(a.ndim)]) for i in range(a.ndim)])
     a[expanded_index] = b
+    
+    
+if mode == "rectengular":
+    wnd = int(sys.argv[2])
+    offset = int(sys.argv[3])
+    sample_width = int(sys.argv[4])
+    softmax_position = sys.argv[5]
+    softmax_temperature = float(sys.argv[6])
+    order_path = sys.argv[7]
+    output_path = sys.argv[8]
 
-if mode == 'gaussian':
+elif mode == 'gaussian':
     std = float(sys.argv[2])
     offset = int(sys.argv[3])
     mean = 0
@@ -63,7 +73,12 @@ if sample_width == 0:
 
 x = np.arange(sample_width) + offset
 
-if mode == 'gaussian':
+if mode == "rectengular":
+    y_sample = np.zeros(sample_width)
+    for i in range(wnd):
+        y_sample[i]=1
+
+elif mode == 'gaussian':
     y_sample = distribution_func.pdf(x)
 elif mode == 'linear':
     y_sample = k * x + b
