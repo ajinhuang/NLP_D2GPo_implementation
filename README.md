@@ -1,17 +1,18 @@
 This is a course project.
 
 #major changes after the milestone:
-added a new function of distribution.
 
-fixed a mistake when super the class of LegacyCriterion.
+    added a new function of distribution.
 
-changed some fairseq modules.
+    fixed a mistake when super the class of LegacyCriterion.
 
-added notebooks which generated graphs.
+    changed some fairseq modules.
 
-added proof of experiments.
+    added notebooks which generated graphs.
 
-paper uploaded.
+    added proof of experiments.
+
+    paper uploaded.
 
 
 The artical, introducing D2GPo, wrote by [Li et al]. , can be found here: https://openreview.net/pdf?id=S1efxTVYDr.
